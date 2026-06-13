@@ -1,0 +1,177 @@
+{
+  "name": "Spring Boot MySQL API",
+  "description": "Employee & Department REST APIs",
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/health"
+          }
+        },
+        {
+          "name": "API Info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Employees",
+      "item": [
+        {
+          "name": "Create Employee",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"department\": \"Engineering\"\n}"
+            },
+            "url": "http://localhost:8080/api/employees"
+          }
+        },
+        {
+          "name": "Get All Employees",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/employees"
+          }
+        },
+        {
+          "name": "Get Employee by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/employees/1"
+          }
+        },
+        {
+          "name": "Get Employee by Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/employees/email/john.doe@example.com"
+          }
+        },
+        {
+          "name": "Get Employees by Department",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/employees/department/Engineering"
+          }
+        },
+        {
+          "name": "Search Employees by Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/employees/search?name=John",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "employees", "search"],
+              "query": [{"key": "name", "value": "John"}]
+            }
+          }
+        },
+        {
+          "name": "Update Employee",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Updated\",\n  \"email\": \"john.updated@example.com\",\n  \"department\": \"HR\"\n}"
+            },
+            "url": "http://localhost:8080/api/employees/1"
+          }
+        },
+        {
+          "name": "Delete Employee",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8080/api/employees/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Departments",
+      "item": [
+        {
+          "name": "Create Department",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Engineering\",\n  \"description\": \"Development team\"\n}"
+            },
+            "url": "http://localhost:8080/api/departments"
+          }
+        },
+        {
+          "name": "Get All Departments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/departments"
+          }
+        },
+        {
+          "name": "Get Department by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/departments/1"
+          }
+        },
+        {
+          "name": "Search Departments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/departments/search?name=Eng",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "departments", "search"],
+              "query": [{"key": "name", "value": "Eng"}]
+            }
+          }
+        },
+        {
+          "name": "Update Department",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Product Engineering\",\n  \"description\": \"Product development\"\n}"
+            },
+            "url": "http://localhost:8080/api/departments/1"
+          }
+        },
+        {
+          "name": "Delete Department",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8080/api/departments/1"
+          }
+        }
+      ]
+    }
+  ]
+}
