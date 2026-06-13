@@ -1,5 +1,5 @@
 target/*
-!target/springboot-mysql-api-1.0.0.jar
+!target/springboot-mysql-api.jar
 .mvn/
 mvnw
 mvnw.cmd
